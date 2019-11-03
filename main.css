@@ -108,10 +108,10 @@ a:hover {
   font-weight: 600;
   padding: 1rem;
   margin: 0;
-  background: rgba(0, 0, 0, .7);
+  background: #cfb53bb3;
   align-self: flex-end;
   flex: 1;
-  color: #cfb53b;
+  color: #333;
 }
 
 #gallery img {
