@@ -40,6 +40,7 @@ header div {
   align-items: center;
   max-width: 64rem;
   margin: .5rem auto;
+  flex-wrap: wrap;
 }
 
 header div h1 {
