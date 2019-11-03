@@ -16,27 +16,41 @@ body {
   background-size: cover;
   background-attachment: fixed;
   overflow: scroll;
-  position: relative;
-  padding-top: 5rem;
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: 1fr minmax(auto , 64rem) 1fr;
+  padding-top: 6rem;
+}
+
+header, section, footer {
+  grid-column: 2/3;
 }
 
 header {
-  max-width: 64rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  grid-column: 1/4;
+  background: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
 }
 
-header h1 {
+header div {
+  display: flex;
+  align-items: center;
+  max-width: 64rem;
+  margin: .5rem auto;
+}
+
+header div h1 {
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
   letter-spacing: .3rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
-header a {
+header div a {
   color: inherit;
   text-decoration: none;
   padding-left: 1rem;
@@ -44,23 +58,25 @@ header a {
   transition: .1s color ease-in-out;
 }
 
-section {
-  max-width: 64rem;
-  width: auto;
-  margin: 2rem auto;
+header .social {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: .5rem;
+  justify-content: end;
+  padding-right: 1rem;
+}
+
+section, footer {
   padding: 0 1rem;
+}
+
+footer {
+  margin-bottom: 2rem;
 }
 
 a:hover {
   color: #cfb53b;
-}
-
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, .1);
 }
 
 #description {
@@ -76,6 +92,25 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   grid-gap: 3rem;
+}
+
+.galery-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 300px;
+}
+
+.galery-item p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 0;
+  background: rgba(0, 0, 0, .7);
+  align-self: flex-end;
+  flex: 1;
+  color: #cfb53b;
 }
 
 #gallery img {
