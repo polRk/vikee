@@ -60,12 +60,12 @@ header div a {
 }
 
 header .social {
-  flex: 1;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: .5rem;
   justify-content: end;
   padding-right: 1rem;
+  flex: 1 0 auto;
 }
 
 section, footer {
